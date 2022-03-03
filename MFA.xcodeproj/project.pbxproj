@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD31A36F27D0FC6900513E9B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CD31A36E27D0FC6900513E9B /* CodeScanner */; };
+		CD33551327CF97B000226748 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33551227CF97B000226748 /* CameraPreview.swift */; };
+		CD33551527CF9E6300226748 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33551427CF9E6300226748 /* CameraService.swift */; };
+		CD4AF43D27C43E6F00F8D28F /* fake-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AF43C27C43E6F00F8D28F /* fake-codes.json */; };
+		CD4AF43F27C43F4B00F8D28F /* OTPRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AF43E27C43F4B00F8D28F /* OTPRow.swift */; };
+		CD4AF44127C43F6800F8D28F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4AF44027C43F6800F8D28F /* ModelData.swift */; };
+		CD72DEB727C28684002E42FB /* OTPList.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD72DEB627C28684002E42FB /* OTPList.swift */; };
+		CD72DEBA27C2990E002E42FB /* SwiftOTP in Frameworks */ = {isa = PBXBuildFile; productRef = CD72DEB927C2990E002E42FB /* SwiftOTP */; };
+		CD9543DB27CBC28200B342D3 /* Counter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9543DA27CBC28200B342D3 /* Counter.swift */; };
+		CD9543DD27CBEF6700B342D3 /* QRCodeScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9543DC27CBEF6700B342D3 /* QRCodeScanner.swift */; };
+		CD9FF80927C14B9A00C9AD78 /* MFAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF80827C14B9A00C9AD78 /* MFAApp.swift */; };
+		CD9FF80D27C14B9B00C9AD78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9FF80C27C14B9B00C9AD78 /* Assets.xcassets */; };
+		CD9FF81027C14B9B00C9AD78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD9FF80F27C14B9B00C9AD78 /* Preview Assets.xcassets */; };
+		CD9FF81F27C1503400C9AD78 /* OTPEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9FF81E27C1503400C9AD78 /* OTPEntry.swift */; };
+		CDD2130527CBA87400CE375C /* OTPDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDD2130427CBA87400CE375C /* OTPDetail.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD33551227CF97B000226748 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		CD33551427CF9E6300226748 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		CD4AF43C27C43E6F00F8D28F /* fake-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fake-codes.json"; sourceTree = "<group>"; };
+		CD4AF43E27C43F4B00F8D28F /* OTPRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPRow.swift; sourceTree = "<group>"; };
+		CD4AF44027C43F6800F8D28F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		CD72DEB627C28684002E42FB /* OTPList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPList.swift; sourceTree = "<group>"; };
+		CD9543DA27CBC28200B342D3 /* Counter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Counter.swift; sourceTree = "<group>"; };
+		CD9543DC27CBEF6700B342D3 /* QRCodeScanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeScanner.swift; sourceTree = "<group>"; };
+		CD9FF80527C14B9A00C9AD78 /* MFA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD9FF80827C14B9A00C9AD78 /* MFAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MFAApp.swift; sourceTree = "<group>"; };
+		CD9FF80C27C14B9B00C9AD78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD9FF80F27C14B9B00C9AD78 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD9FF81E27C1503400C9AD78 /* OTPEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPEntry.swift; sourceTree = "<group>"; };
+		CDD2130427CBA87400CE375C /* OTPDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPDetail.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD9FF80227C14B9A00C9AD78 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD31A36F27D0FC6900513E9B /* CodeScanner in Frameworks */,
+				CD72DEBA27C2990E002E42FB /* SwiftOTP in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD9FF7FC27C14B9A00C9AD78 = {
+			isa = PBXGroup;
+			children = (
+				CD9FF80727C14B9A00C9AD78 /* MFA */,
+				CD9FF80627C14B9A00C9AD78 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD9FF80627C14B9A00C9AD78 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FF80527C14B9A00C9AD78 /* MFA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD9FF80727C14B9A00C9AD78 /* MFA */ = {
+			isa = PBXGroup;
+			children = (
+				CD33551427CF9E6300226748 /* CameraService.swift */,
+				CD9FF80827C14B9A00C9AD78 /* MFAApp.swift */,
+				CD9FF81A27C14EAC00C9AD78 /* Views */,
+				CD9FF81D27C14F3200C9AD78 /* Model */,
+				CD9FF82127C1542E00C9AD78 /* Resources */,
+				CD9FF80C27C14B9B00C9AD78 /* Assets.xcassets */,
+				CD9FF80E27C14B9B00C9AD78 /* Preview Content */,
+			);
+			path = MFA;
+			sourceTree = "<group>";
+		};
+		CD9FF80E27C14B9B00C9AD78 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FF80F27C14B9B00C9AD78 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD9FF81A27C14EAC00C9AD78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD72DEB627C28684002E42FB /* OTPList.swift */,
+				CD4AF43E27C43F4B00F8D28F /* OTPRow.swift */,
+				CDD2130427CBA87400CE375C /* OTPDetail.swift */,
+				CD9543DA27CBC28200B342D3 /* Counter.swift */,
+				CD9543DC27CBEF6700B342D3 /* QRCodeScanner.swift */,
+				CD33551227CF97B000226748 /* CameraPreview.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CD9FF81D27C14F3200C9AD78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD9FF81E27C1503400C9AD78 /* OTPEntry.swift */,
+				CD4AF44027C43F6800F8D28F /* ModelData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CD9FF82127C1542E00C9AD78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CD4AF43C27C43E6F00F8D28F /* fake-codes.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD9FF80427C14B9A00C9AD78 /* MFA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD9FF81327C14B9B00C9AD78 /* Build configuration list for PBXNativeTarget "MFA" */;
+			buildPhases = (
+				CD9FF80127C14B9A00C9AD78 /* Sources */,
+				CD9FF80227C14B9A00C9AD78 /* Frameworks */,
+				CD9FF80327C14B9A00C9AD78 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MFA;
+			packageProductDependencies = (
+				CD72DEB927C2990E002E42FB /* SwiftOTP */,
+				CD31A36E27D0FC6900513E9B /* CodeScanner */,
+			);
+			productName = MFA;
+			productReference = CD9FF80527C14B9A00C9AD78 /* MFA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD9FF7FD27C14B9A00C9AD78 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					CD9FF80427C14B9A00C9AD78 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = CD9FF80027C14B9A00C9AD78 /* Build configuration list for PBXProject "MFA" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD9FF7FC27C14B9A00C9AD78;
+			packageReferences = (
+				CD72DEB827C2990E002E42FB /* XCRemoteSwiftPackageReference "SwiftOTP" */,
+				CD31A36D27D0FC6900513E9B /* XCRemoteSwiftPackageReference "CodeScanner" */,
+			);
+			productRefGroup = CD9FF80627C14B9A00C9AD78 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD9FF80427C14B9A00C9AD78 /* MFA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD9FF80327C14B9A00C9AD78 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD9FF81027C14B9B00C9AD78 /* Preview Assets.xcassets in Resources */,
+				CD4AF43D27C43E6F00F8D28F /* fake-codes.json in Resources */,
+				CD9FF80D27C14B9B00C9AD78 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD9FF80127C14B9A00C9AD78 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD33551527CF9E6300226748 /* CameraService.swift in Sources */,
+				CD9543DB27CBC28200B342D3 /* Counter.swift in Sources */,
+				CDD2130527CBA87400CE375C /* OTPDetail.swift in Sources */,
+				CD72DEB727C28684002E42FB /* OTPList.swift in Sources */,
+				CD33551327CF97B000226748 /* CameraPreview.swift in Sources */,
+				CD9FF81F27C1503400C9AD78 /* OTPEntry.swift in Sources */,
+				CD9543DD27CBEF6700B342D3 /* QRCodeScanner.swift in Sources */,
+				CD4AF44127C43F6800F8D28F /* ModelData.swift in Sources */,
+				CD4AF43F27C43F4B00F8D28F /* OTPRow.swift in Sources */,
+				CD9FF80927C14B9A00C9AD78 /* MFAApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CD9FF81127C14B9B00C9AD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD9FF81227C14B9B00C9AD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CD9FF81427C14B9B00C9AD78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MFA/Preview Content\"";
+				DEVELOPMENT_TEAM = YK7AR7ZC5S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The application will scan QR codes to add one-time password secrets.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dankelly.MFA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD9FF81527C14B9B00C9AD78 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MFA/Preview Content\"";
+				DEVELOPMENT_TEAM = YK7AR7ZC5S;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "The application will scan QR codes to add one-time password secrets.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = dev.dankelly.MFA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD9FF80027C14B9A00C9AD78 /* Build configuration list for PBXProject "MFA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9FF81127C14B9B00C9AD78 /* Debug */,
+				CD9FF81227C14B9B00C9AD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD9FF81327C14B9B00C9AD78 /* Build configuration list for PBXNativeTarget "MFA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD9FF81427C14B9B00C9AD78 /* Debug */,
+				CD9FF81527C14B9B00C9AD78 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD31A36D27D0FC6900513E9B /* XCRemoteSwiftPackageReference "CodeScanner" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/twostraws/CodeScanner";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		CD72DEB827C2990E002E42FB /* XCRemoteSwiftPackageReference "SwiftOTP" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lachlanbell/SwiftOTP";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD31A36E27D0FC6900513E9B /* CodeScanner */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD31A36D27D0FC6900513E9B /* XCRemoteSwiftPackageReference "CodeScanner" */;
+			productName = CodeScanner;
+		};
+		CD72DEB927C2990E002E42FB /* SwiftOTP */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD72DEB827C2990E002E42FB /* XCRemoteSwiftPackageReference "SwiftOTP" */;
+			productName = SwiftOTP;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = CD9FF7FD27C14B9A00C9AD78 /* Project object */;
+}
