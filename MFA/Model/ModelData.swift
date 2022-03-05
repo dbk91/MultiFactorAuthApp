@@ -6,8 +6,11 @@
 //
 
 import Foundation
+import Combine
 
-var otpEntries: [OTPEntry] = load("fake-codes.json")
+final class ModelData: ObservableObject {
+    @Published var otpEntries: [OTPEntry] = load("fake-codes.json")
+}
 
 func load<T: Decodable>(_ filename: String) -> T {
     let data: Data

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD31A36F27D0FC6900513E9B /* CodeScanner in Frameworks */ = {isa = PBXBuildFile; productRef = CD31A36E27D0FC6900513E9B /* CodeScanner */; };
+		CD31A37127D127FD00513E9B /* OTPForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD31A37027D127FD00513E9B /* OTPForm.swift */; };
 		CD33551327CF97B000226748 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33551227CF97B000226748 /* CameraPreview.swift */; };
 		CD33551527CF9E6300226748 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD33551427CF9E6300226748 /* CameraService.swift */; };
 		CD4AF43D27C43E6F00F8D28F /* fake-codes.json in Resources */ = {isa = PBXBuildFile; fileRef = CD4AF43C27C43E6F00F8D28F /* fake-codes.json */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD31A37027D127FD00513E9B /* OTPForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPForm.swift; sourceTree = "<group>"; };
 		CD33551227CF97B000226748 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
 		CD33551427CF9E6300226748 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
 		CD4AF43C27C43E6F00F8D28F /* fake-codes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "fake-codes.json"; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				CD9543DA27CBC28200B342D3 /* Counter.swift */,
 				CD9543DC27CBEF6700B342D3 /* QRCodeScanner.swift */,
 				CD33551227CF97B000226748 /* CameraPreview.swift */,
+				CD31A37027D127FD00513E9B /* OTPForm.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				CD33551527CF9E6300226748 /* CameraService.swift in Sources */,
 				CD9543DB27CBC28200B342D3 /* Counter.swift in Sources */,
 				CDD2130527CBA87400CE375C /* OTPDetail.swift in Sources */,
+				CD31A37127D127FD00513E9B /* OTPForm.swift in Sources */,
 				CD72DEB727C28684002E42FB /* OTPList.swift in Sources */,
 				CD33551327CF97B000226748 /* CameraPreview.swift in Sources */,
 				CD9FF81F27C1503400C9AD78 /* OTPEntry.swift in Sources */,

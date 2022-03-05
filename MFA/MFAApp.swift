@@ -11,7 +11,8 @@ import SwiftUI
 struct MFAApp: App {
     var body: some Scene {
         WindowGroup {
-            OTPList(otpEntries: otpEntries)
+            OTPList()
+                .environmentObject(ModelData())
         }
     }
 }

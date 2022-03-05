@@ -34,7 +34,9 @@ struct OTPDetail: View {
 }
 
 struct OTPDetail_Previews: PreviewProvider {
+    static let modelData = ModelData()
+    
     static var previews: some View {
-        OTPDetail(otpEntry: otpEntries[0], date: Date())
+        OTPDetail(otpEntry: modelData.otpEntries[0], date: Date())
     }
 }

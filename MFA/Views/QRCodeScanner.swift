@@ -16,42 +16,50 @@ struct QRCodeScanner: View {
     let videoAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
     
     var body: some View {
-        VStack {
-            HStack {
-                Button("Cancel") {
-                    presentationMode.wrappedValue.dismiss()
+        NavigationView {
+            VStack {
+                HStack {
+                    Button("Cancel") {
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                    
+                    Spacer()
+                }
+                .padding()
+                
+                ZStack {
+                    CodeScannerView(codeTypes: [.qr], showViewfinder: videoAuthorizationStatus == .authorized) { response in
+                        switch response {
+                        case .success(let result):
+                            let url = URL(string: result.string)!
+                            var components = URLComponents()
+                            components.query = url.fragment
+                        case .failure(let error):
+                            message = error.localizedDescription
+                        }
+                    }
+                    
+                    if videoAuthorizationStatus != .authorized {
+                        VStack {
+                            Text("This application requires camera permissions")
+                                .padding(.bottom)
+                            
+                            Link("Go to Settings", destination: URL(string: UIApplication.openSettingsURLString)!)
+                        }
+                    }
                 }
                 
                 Spacer()
-            }
-            .padding()
-            
-            ZStack {
-                CodeScannerView(codeTypes: [.qr], showViewfinder: videoAuthorizationStatus == .authorized) { response in
-                    switch response {
-                    case .success(let result):
-                        print("Found code: \(result.string)")
-                    case .failure(let error):
-                        message = error.localizedDescription
-                    }
-                }
                 
-                if videoAuthorizationStatus != .authorized {
-                    VStack {
-                        Text("This application requires camera permissions")
-                            .padding(.bottom)
-                        
-                        Link("Go to Settings", destination: URL(string: UIApplication.openSettingsURLString)!)
-                    }
+                NavigationLink {
+                    OTPForm()
+                } label: {
+                    Label("Add Details Manually", systemImage: "plus.circle")
+                        .padding()
                 }
             }
-            
-            Spacer()
-            
-            Button("Enter Details Manually") {
-                
-            }
-            .padding()
+            .navigationBarHidden(true)
+            .navigationTitle("Code Scanner")
         }
     }
 }
