@@ -22,14 +22,16 @@ struct OTPList: View {
         }
         
         return modelData.otpEntries.filter {
-            $0.issuer.contains(searchText) || $0.accountname.contains(searchText)
+            $0.issuer.localizedCaseInsensitiveContains(searchText) || $0.accountname.localizedCaseInsensitiveContains(searchText)
         }
     }
     
     var body: some View {
         VStack {
-            Counter(width: 50.0, height: 50.0, date: currentDate)
-                .padding(.bottom)
+            if !modelData.otpEntries.isEmpty {
+                Counter(width: 50.0, height: 50.0, date: currentDate)
+                    .padding(.bottom)
+            }
             NavigationView {
                 VStack {
                     if modelData.otpEntries.isEmpty {
@@ -37,7 +39,6 @@ struct OTPList: View {
                             .multilineTextAlignment(.center)
                             .padding()
                     } else {
-                        
                         List {
                             ForEach(searchResults) { otpEntry in
                                 NavigationLink {
@@ -54,9 +55,9 @@ struct OTPList: View {
                             currentDate = input
                         }
                         .listStyle(.plain)
+                        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
                     }
                 }
-                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
                 .toolbar {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Spacer()

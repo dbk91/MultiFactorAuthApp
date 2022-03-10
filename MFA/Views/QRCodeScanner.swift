@@ -11,7 +11,7 @@ import CodeScanner
 
 struct QRCodeScanner: View {
     @Environment(\.presentationMode) var presentationMode
-    @State private var message = "Henlo"
+    @State private var message = ""
     
     let videoAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
     
