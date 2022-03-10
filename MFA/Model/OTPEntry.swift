@@ -17,8 +17,44 @@ enum CodingKeys: CodingKey {
     case accountname, issuer, secret
 }
 
+enum OTPError: Error {
+    case InvalidURLScheme
+    case MissingParams
+}
+
 class OTPEntry: ObservableObject, Codable, Identifiable {
     init() { }
+    
+    init(url: URL) throws {
+        if url.scheme != "otpauth" {
+            throw OTPError.InvalidURLScheme
+        }
+        
+        var components = URLComponents()
+        components.query = url.query
+        
+        if (url.lastPathComponent.contains(":")) {
+            let pathComponents = url.lastPathComponent.components(separatedBy: ":")
+            accountname = pathComponents[pathComponents.endIndex - 1]
+        } else {
+            accountname = url.lastPathComponent
+        }
+        
+        for query in components.queryItems! {
+            switch query.name {
+            case "secret":
+                secret = query.value!
+            case "issuer":
+                issuer = query.value!
+            default:
+                continue;
+            }
+        }
+        
+        if secret.isEmpty || issuer.isEmpty {
+            throw OTPError.MissingParams
+        }
+    }
     
     required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

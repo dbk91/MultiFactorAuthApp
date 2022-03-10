@@ -11,7 +11,13 @@ import CodeScanner
 
 struct QRCodeScanner: View {
     @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var modelData: ModelData
+    
+    @StateObject private var otpEntry = OTPEntry()
+    
     @State private var message = ""
+    @State private var alertMessage = ""
+    @State private var showAlert = false
     
     let videoAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
     
@@ -28,15 +34,28 @@ struct QRCodeScanner: View {
                 .padding()
                 
                 ZStack {
-                    CodeScannerView(codeTypes: [.qr], showViewfinder: videoAuthorizationStatus == .authorized) { response in
+                    CodeScannerView(codeTypes: [.qr], scanMode: .continuous, scanInterval: 1.0, showViewfinder: videoAuthorizationStatus == .authorized) { response in
                         switch response {
                         case .success(let result):
                             let url = URL(string: result.string)!
-                            var components = URLComponents()
-                            components.query = url.fragment
+                            
+                            do {
+                                let otpEntry = try OTPEntry(url: url)
+                                modelData.otpEntries.append(otpEntry)
+                                presentationMode.wrappedValue.dismiss()
+                            } catch {
+                                showAlert = true
+                            }
                         case .failure(let error):
                             message = error.localizedDescription
                         }
+                    }
+                    .alert("Failed to Scan", isPresented: $showAlert) {
+                        Button("Okay") {
+                            showAlert = false
+                        }
+                    } message: {
+                        Text("The scanned token is invalid")
                     }
                     
                     if videoAuthorizationStatus != .authorized {
@@ -67,5 +86,6 @@ struct QRCodeScanner: View {
 struct QRCodeScanner_Previews: PreviewProvider {
     static var previews: some View {
         QRCodeScanner()
+            .environmentObject(ModelData())
     }
 }
